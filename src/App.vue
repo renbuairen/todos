@@ -6,10 +6,12 @@
       <TodoMain />
       <TodoFooter />
     </div>
+    <MyButton @click="clickFn" btnStyle="warning" type="normal" />
   </div>
 </template>
 
 <script>
+import MyButton from './components/MyButton.vue'
 import TodoFooter from './components/TodoFooter.vue' // shift + alt + 下
 import TodoHeader from './components/TodoHeader.vue' // shift + alt + 下
 import TodoMain from './components/TodoMain.vue' // shift + alt + 下
@@ -22,13 +24,18 @@ export default {
   components: {
     TodoFooter,
     TodoHeader,
-    TodoMain
+    TodoMain,
+    MyButton
   },
 
   created() {},
 
   methods: {
-    ...mapActions('photo', ['replaceColor'])
+    ...mapActions('photo', ['replaceColor']),
+
+    clickFn() {
+      alert('触发了按钮事件')
+    }
   }
 }
 </script>
