@@ -6,7 +6,12 @@
       <TodoMain />
       <TodoFooter />
     </div>
-    <MyButton @click="clickFn" btnStyle="warning" type="normal" />
+    <MyButton
+      @click="clickFn"
+      btnStyle="warning"
+      type="normal"
+      text="好的按钮"
+    />
   </div>
 </template>
 
